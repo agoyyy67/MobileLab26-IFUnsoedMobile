@@ -18,9 +18,17 @@ fun BasicInfoScreen(onNavigateToContact: () -> Unit) {
         topBar = {
             TopAppBar(
                 title = { Text("Tentang Jualan") },
+                navigationIcon = {
+                    Icon(
+                        painter = painterResource(id = R.drawable.info_icon),
+                        contentDescription = "Info Icon",
+                        modifier = Modifier.padding(start = 12.dp, end = 4.dp)
+                    )
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimary
                 )
             )
         }
